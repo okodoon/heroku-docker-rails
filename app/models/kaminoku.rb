@@ -1,0 +1,2 @@
+class Kaminoku < ApplicationRecord
+end

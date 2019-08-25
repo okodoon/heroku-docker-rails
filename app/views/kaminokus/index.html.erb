@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Kaminokus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kamigo</th>
+      <th>Nakashichi</th>
+      <th>Shimogo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kaminokus.each do |kaminoku| %>
+      <tr>
+        <td><%= kaminoku.kamigo %></td>
+        <td><%= kaminoku.nakashichi %></td>
+        <td><%= kaminoku.shimogo %></td>
+        <td><%= link_to 'Show', kaminoku %></td>
+        <td><%= link_to 'Edit', edit_kaminoku_path(kaminoku) %></td>
+        <td><%= link_to 'Destroy', kaminoku, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kaminoku', new_kaminoku_path %>

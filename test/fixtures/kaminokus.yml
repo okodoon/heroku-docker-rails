@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kamigo: MyString
+  nakashichi: MyString
+  shimogo: MyString
+
+two:
+  kamigo: MyString
+  nakashichi: MyString
+  shimogo: MyString

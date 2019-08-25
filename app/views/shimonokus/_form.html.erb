@@ -1,0 +1,27 @@
+<%= form_with(model: shimonoku, local: true) do |form| %>
+  <% if shimonoku.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(shimonoku.errors.count, "error") %> prohibited this shimonoku from being saved:</h2>
+
+      <ul>
+      <% shimonoku.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :kamishichi %>
+    <%= form.text_field :kamishichi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shimoshichi %>
+    <%= form.text_field :shimoshichi %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class Shimonoku < ApplicationRecord
+end
