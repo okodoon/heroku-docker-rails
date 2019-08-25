@@ -1,0 +1,20 @@
+%p#notice= notice
+%h1 Kaminokus
+%table
+  %thead
+    %tr
+      %th Kamigo
+      %th Nakashichi
+      %th Shimogo
+      %th{:colspan => "3"}
+  %tbody
+    - @kaminokus.each do |kaminoku|
+      %tr
+        %td= kaminoku.kamigo
+        %td= kaminoku.nakashichi
+        %td= kaminoku.shimogo
+        %td= link_to 'Show', kaminoku
+        %td= link_to 'Edit', edit_kaminoku_path(kaminoku)
+        %td= link_to 'Destroy', kaminoku, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Kaminoku', new_kaminoku_path

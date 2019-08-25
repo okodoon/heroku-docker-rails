@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %strong Kamigo:
+  = @kaminoku.kamigo
+%p
+  %strong Nakashichi:
+  = @kaminoku.nakashichi
+%p
+  %strong Shimogo:
+  = @kaminoku.shimogo
+= link_to 'Edit', edit_kaminoku_path(@kaminoku)
+|
+= link_to 'Back', kaminokus_path

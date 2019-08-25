@@ -1,0 +1,20 @@
+= form_with(model: kaminoku, local: true) do |form|
+  - if kaminoku.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(kaminoku.errors.count, "error")
+        prohibited this kaminoku from being saved:
+      %ul
+        - kaminoku.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :kamigo
+    = form.text_field :kamigo
+  .field
+    = form.label :nakashichi
+    = form.text_field :nakashichi
+  .field
+    = form.label :shimogo
+    = form.text_field :shimogo
+  .actions
+    = form.submit
